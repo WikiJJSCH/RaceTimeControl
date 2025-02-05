@@ -4,13 +4,14 @@ import { useEffect, useState } from 'react';
 
 import Banner from '../../components/banner';
 import Navbar from '../../components/navbar';
+import CreationPilote from '../../components/creationPilote';
 
 export default function Home() {
     const [pilotes, setPilotes] = useState([]);
 
     useEffect(() => {
         const fetchPilotes = async () => {
-            const res = await fetch('/api/pilotes');
+            const res = await fetch('/api/listePilotes');
             const data = await res.json();
 
             setPilotes(data);
@@ -54,6 +55,8 @@ export default function Home() {
                     ))}
                 </tbody>
             </table>
+            <br/>
+            <CreationPilote />
         </div>
     );
 };
