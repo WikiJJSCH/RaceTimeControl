@@ -1,7 +1,9 @@
+import Image from "next/image";
+
 export default function Banner() {
     return(
-       <div className="text-center">
-            <h1>Race Time Control</h1>
+       <div>
+            <Image src="/images/chronometer.png" alt="RaceTimeControl" width={50} height={50}/>
         </div>
     );    
 };

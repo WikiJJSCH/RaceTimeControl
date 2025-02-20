@@ -20,6 +20,7 @@ const CreationPilote = () => {
         if (response.ok) {
             const data = await response.json();
             console.log('Pilote ajouté : ', data);
+            window.location.reload();
         } else {
             const error = await response.json();
             console.error('Erreur : ', error);
@@ -28,10 +29,32 @@ const CreationPilote = () => {
 
     return (
         <div>
-            <input type="text" placeholder="Nom" value={nom} onChange={(e) => setNom(e.target.value)}/>
-            <input type="text" placeholder="Prénom" value={prenom} onChange={(e) => setPrenom(e.target.value)}/>
-            <input type="text" placeholder="Numéro" value={num} onChange={(e) => setNum(e.target.value)}/>
-            <button onClick={handleSubmit}>Créer</button>
+            <table className="table">
+                <tbody>
+                    <tr>
+                        <td className="table-dark">
+                            <div className="col-auto">
+                                <input type="text" className="form-control" placeholder="Nom" value={nom} onChange={(e) => setNom(e.target.value)}/>
+                            </div>
+                        </td>
+                        <td className="table-dark">
+                            <div className="col-auto">
+                                <input type="text" className="form-control" placeholder="Prénom" value={prenom} onChange={(e) => setPrenom(e.target.value)}/>
+                            </div>
+                        </td>
+                        <td className="table-dark">
+                            <div className="col-auto">
+                                <input type="text" className="form-control" placeholder="Numéro" value={num} onChange={(e) => setNum(e.target.value)}/>
+                            </div>
+                        </td>
+                        <td className="table-dark">
+                            <div className="col-auto">
+                                <button type="submit" className="btn btn-primary mb-3" onClick={handleSubmit}>Créer</button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     );
 };

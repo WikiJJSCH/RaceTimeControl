@@ -21,11 +21,20 @@ export default function Home() {
     }, []);
 
     return (
-        <div className="App p-3">
-            <Banner />
-            <Navbar />
-            <hr/>
-            <h2 className="text-center">Gestion des Pilotes</h2>
+        <div className="App p-3 bg-dark">
+            <table width="100%">
+                <tbody>
+                    <tr>
+                        <td width="5%">
+                            <Banner />
+                        </td>
+                        <td>
+                            <Navbar />
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <h2 className="text-center text-warning">Gestion des Pilotes</h2>
             <br/>
             <table className="table table-warning table-striped">
                 <thead>
