@@ -1,13 +1,4 @@
-import sqlite3 from 'sqlite3';
-import { open } from 'sqlite';
-
-// Ouvrir la base de données SQLite
-const openDb = async () => {
-    return open({
-      filename: './database/racetimecontrol.sqlite',
-      driver: sqlite3.Database,
-    });
-};
+import db from '../../components/database';
 
 export default async function handler(req, res) {
     if (req.method === "POST") {
@@ -18,8 +9,6 @@ export default async function handler(req, res) {
         }
 
         try {
-            const db = await openDb();
-
             await db.run('INSERT INTO pilote (nom, prenom, num, supprime, date_creation, utilisateur_creation) VALUES(?, ?, ?, \'N\', DATETIME(\'now\'), \'ADMIN\')',
                 [nom, prenom, num]
             );

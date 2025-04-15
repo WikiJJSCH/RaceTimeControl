@@ -21,7 +21,7 @@ export default function Home() {
     }, []);
 
     return (
-        <div className="App p-3 bg-dark">
+        <div style={{ backgroundColor : 'black' , minHeight: '100vh' }}>
             <table width="100%">
                 <tbody>
                     <tr>
@@ -34,30 +34,30 @@ export default function Home() {
                     </tr>
                 </tbody>
             </table>
-            <h2 className="text-center text-warning">Gestion des Pilotes</h2>
+            <h2 style={{ textAlign : 'center' , color : 'yellow'}}>Gestion des Pilotes</h2>
             <br/>
-            <table className="table table-warning table-striped">
+            <table width="90%" style={{ margin : '0 auto' }}>
                 <thead>
                     <tr>
-                        <th scope="col">Id</th>
-                        <th scope="col">Nom</th>
-                        <th scope="col">Prénom</th>
-                        <th scope="col">N°</th>
+                        <th scope="col" style={{ textAlign : 'center' , color : 'yellow' , border :'2px solid grey' }}>Id</th>
+                        <th scope="col" style={{ textAlign : 'center' , color : 'yellow' , border :'2px solid grey' }}>Nom</th>
+                        <th scope="col" style={{ textAlign : 'center' , color : 'yellow' , border :'2px solid grey' }}>Prénom</th>
+                        <th scope="col" style={{ textAlign : 'center' , color : 'yellow' , border :'2px solid grey' }}>N°</th>
                     </tr>
                 </thead>
                 <tbody>
                     {pilotes.map((pilote) => (
                         <tr key={pilote.id}>
-                            <td>
+                            <td style={{ textAlign : 'center' , color : 'white' , border :'2px solid grey' }}>
                                 {pilote.id}
                             </td>
-                            <td>
+                            <td style={{ textAlign : 'center' , color : 'white' , border :'2px solid grey' }}>
                                 {pilote.nom}
                             </td>
-                            <td>
+                            <td style={{ textAlign : 'center' , color : 'white' , border :'2px solid grey' }}>
                                 {pilote.prenom}
                             </td>
-                            <td>
+                            <td style={{ textAlign : 'center' , color : 'white' , border :'2px solid grey' }}>
                                 {pilote.num}
                             </td>
                         </tr>
@@ -65,7 +65,10 @@ export default function Home() {
                 </tbody>
             </table>
             <br/>
+            <br/>
+            <br/>                    
             <CreationPilote />
+            <br/>
         </div>
     );
 };

@@ -3,18 +3,22 @@ import 'bootstrap/dist/css/bootstrap.min.css'; // Import de Bootstrap
 
 export default function Navbar() {
     return (        
-        <div className="d-flex justify-content-center">
-            <ul className="nav mx-auto">
-                <li className="nav-item">
-                    <Link className="nav-link" href="/">Accueil</Link>
-                </li>
-                <li className="nav-item">
-                    <Link className="nav-link" href="/pilotes">Pilotes</Link>
-                </li>
-                <li className="nav-item">
-                    <Link className="nav-link" href="/circuits">Circuits</Link>
-                </li>
-            </ul>            
+        <div>
+            <table width="100%" style={{ margin : '0 auto' }}>
+                <tbody>
+                    <tr>
+                        <td>
+                            <Link href="/">Accueil</Link>
+                        </td>
+                        <td>
+                            <Link href="/pilotes">Pilotes</Link>
+                        </td>
+                        <td>
+                            <Link href="/circuits">Circuits</Link>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>            
         </div>
     );
 };

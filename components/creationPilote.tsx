@@ -28,34 +28,24 @@ const CreationPilote = () => {
     };
 
     return (
-        <div>
-            <table className="table">
-                <tbody>
-                    <tr>
-                        <td className="table-dark">
-                            <div className="col-auto">
-                                <input type="text" className="form-control" placeholder="Nom" value={nom} onChange={(e) => setNom(e.target.value)}/>
-                            </div>
-                        </td>
-                        <td className="table-dark">
-                            <div className="col-auto">
-                                <input type="text" className="form-control" placeholder="Prénom" value={prenom} onChange={(e) => setPrenom(e.target.value)}/>
-                            </div>
-                        </td>
-                        <td className="table-dark">
-                            <div className="col-auto">
-                                <input type="text" className="form-control" placeholder="Numéro" value={num} onChange={(e) => setNum(e.target.value)}/>
-                            </div>
-                        </td>
-                        <td className="table-dark">
-                            <div className="col-auto">
-                                <button type="submit" className="btn btn-primary mb-3" onClick={handleSubmit}>Créer</button>
-                            </div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+        <table width="75%" style={{ margin : '0 auto' }}>
+            <tbody>
+                <tr>
+                    <td>
+                        <input type="text" placeholder="Nom" value={nom} onChange={(e) => setNom(e.target.value)} style={{ display : 'block' , margin : '0 auto' , textAlign : 'center' , backgroundColor : 'blue' , color : 'yellow' }}/>
+                    </td>
+                    <td>
+                        <input type="text" placeholder="Prénom" value={prenom} onChange={(e) => setPrenom(e.target.value)} style={{ display : 'block' , margin : '0 auto' , textAlign : 'center' , backgroundColor : 'blue' , color : 'yellow' }}/>
+                    </td>
+                    <td>
+                        <input type="text" placeholder="Numéro" value={num} onChange={(e) => setNum(e.target.value)} style={{ display : 'block' , margin : '0 auto' , textAlign : 'center' , backgroundColor : 'blue' , color : 'yellow' }}/>
+                    </td>
+                    <td>
+                        <button type="submit" onClick={handleSubmit} style={{ display : 'block' , margin : '0 auto' , backgroundColor : 'grey' , width :'100%' }}><div style={{ fontWeight : 'bold' }}>Créer</div></button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     );
 };
 

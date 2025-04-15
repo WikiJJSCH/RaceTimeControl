@@ -5,7 +5,7 @@ import Navbar from '../components/navbar';
 
 export default function Home() {
     return (
-        <div className="App p-3 bg-dark">
+        <div style={{ backgroundColor : 'black' , minHeight: '100vh'  }}>
             <table width="100%">
                 <tbody>
                     <tr>
